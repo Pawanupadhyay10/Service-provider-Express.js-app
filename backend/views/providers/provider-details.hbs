@@ -1,0 +1,27 @@
+<section class="page-section" id="provider-details">
+    <div class="container">
+        <h2 class="text-center mt-0">{{hobby.sport}}</h2>
+        <hr class="divider my-4" />
+        <div class="table table-hover table-bordered table-responsive">
+           <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Reading</th>
+                        <th scope="col">Gaming</th>
+                        <th scope="col">Sport</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">{{id}}</td>
+                            <td scope="row">{{hobby.reading}}</td>
+                            <td scope="row">{{hobby.gaming}}</td>
+                            <td scope="row">{{hobby.sport}}</td>
+                        </tr>
+                    </tbody>
+           </table>
+        </div>
+        <a href="/providers/edit/{{id}}"" class=btn btn-secondary btn-sm">provider-edit</a>
+    </div>
+</section>

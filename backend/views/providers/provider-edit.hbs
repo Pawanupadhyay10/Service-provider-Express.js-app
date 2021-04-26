@@ -1,0 +1,30 @@
+<section class="page-section" id="edit-provider">
+    <div class="container">
+        <h2 class="text-center mt-0">Edit Your Service</h2>
+        <hr class="divider my-4" />
+        <div>
+            <form  class="user" action="/providers/update/{{provider.id}}" method="post">
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault01">Name</label>
+                        <input type="text" name="name" class="form-control"  
+                         value="{{provider.name}}" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault02">Age</label>
+                        <input type="text" name="age" class="form-control" 
+                         value="{{provider.age}}" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault03">Hobby</label>
+                        <input type="text" name="sport" class="form-control"
+                        value="{{provider.hobby.sport}}" required>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+</section>
