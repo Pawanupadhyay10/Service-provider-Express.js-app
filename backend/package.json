@@ -13,6 +13,8 @@
     "express": "~4.16.1",
     "hbs": "^4.1.2",
     "http-errors": "~1.6.3",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.5",
     "morgan": "~1.9.1",
     "startbootstrap-creative": "^6.0.4"
   }
