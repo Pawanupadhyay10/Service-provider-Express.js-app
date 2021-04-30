@@ -1,0 +1,58 @@
+<section class="page-section" id="provider-list">
+    <div class="container">
+        <h2 class="text-center mt-0">At Your Service</h2>
+        <hr class="divider my-4" />
+        <a routerLink="add-providers" class="btn btn-secondary btn-sm my-2">Add new provider</a>
+        <div class="table table-hover table-bordered table-responsive">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">age</th>
+                        <th scope="col">Hobby</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let provider of providers">
+                    <tr>
+                        <td scope="row">{{provider.id}}</td>
+                        <td scope="row">{{provider.name}}</td>
+                        <td scope="row">{{provider.age}}</td>
+                        <td scope="row">{{provider.hobby.sport}}</td>
+                        <td scope="row">
+                            <a routerLink="/providers/details/{{provider.id}}"  class="btn btn-info btn-sm mx-2">More info</a>
+                            <a routerLink="/providers/edit/{{provider.id}}"  class="btn btn-secondary btn-sm mx-2">edit</a>
+                            <a href="#myModal{{provider.id}}" data-target="#myModal" class="btn btn-danger btn-sm mx-2"
+                                data-toggle="modal">Delete</a>
+                        </td>
+                    </tr>
+                    <!-- Modal HTML -->
+                    <div id="myModal" class="modal fade">
+                        <div class="modal-dialog modal-confirm">
+                            <div class="modal-content">
+                                <div class="modal-header flex-column">
+                                    <div class="icon-box">
+                                        <i class="material-icons">&#xE5CD;</i>
+                                    </div>
+                                    <h4 class="modal-title w-100">Are you sure?</h4>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Do you really want to delete these records? This process cannot be undone.</p>
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <a href="/providers/delete/{{provider.id}}" type="button" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

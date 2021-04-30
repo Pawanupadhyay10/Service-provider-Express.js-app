@@ -1,0 +1,31 @@
+<!-- Contact-->
+<section class="page-section" id="contact">
+    <div class="container">
+        <div class="row justify-content-center">
+            <form #contactform="ngForm" (ngSubmit)="handlesubmit(contactform)">
+                <h2>Registration Form</h2>
+            
+                <label for="r1" id="fn">First Name :</label>
+                <input type="text" name="fname" id="r1"[value]=""ngModel><br />
+            
+                <label for="r2" id="ln">Last Name :</label>
+                <input type="text" name="lname" id="r2"[value]=""ngModel><br />
+            
+                <label for="r3" id="un">Username :</label>
+                <input type="text" name="uname" id="r3"[value]=""ngModel><br />
+            
+                <label for="r4" id="pwd">Password :</label>
+                <input type="password" name="pass" id="r4"[value]=""ngModel><br />
+            
+                <label for="r5" id="em">Email :</label>
+                <input type="text" name="email" id="r5"[value]=""ngModel><br />
+            
+                <label for="r6" id="mn">Mobile No :</label>
+                <input type="text" name="mno" id="r6"[value]=""ngModel><br />
+            
+                <button type="submit" value="Submit" id="button">Register</button>
+                <a routerLink="/login" routerLinkActive="active">Back to Home</a>
+            </form>
+        </div>
+    </div>
+</section>
